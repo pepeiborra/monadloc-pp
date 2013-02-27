@@ -46,7 +46,7 @@ ourParseMode = defaultParseMode { ignoreLinePragmas = False,
                                         ,FunctionalDependencies
                                         ,FlexibleContexts
                                         ,FlexibleInstances
-                                        ,ExplicitForall
+                                        ,ExplicitForAll
                                         ,ExistentialQuantification
                                         ,PatternGuards
                                         ,ViewPatterns

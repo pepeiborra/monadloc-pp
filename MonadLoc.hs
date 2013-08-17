@@ -1,5 +1,3 @@
-{-# LANGUAGE PatternGuards #-}
-
 import Data.Generics
 import Data.List
 import Language.Haskell.Exts.Annotated

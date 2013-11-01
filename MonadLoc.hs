@@ -1,5 +1,4 @@
 import Data.Generics
-import Data.List
 import Language.Haskell.Exts.Annotated
 import System.Environment
 import System.FilePath
@@ -39,6 +38,7 @@ work fn contents =
 ourParseMode :: ParseMode
 ourParseMode = defaultParseMode { ignoreLinePragmas = False,
                                   extensions =
+                                      map EnableExtension
                                         [CPP
                                         ,MultiParamTypeClasses
                                         ,FunctionalDependencies

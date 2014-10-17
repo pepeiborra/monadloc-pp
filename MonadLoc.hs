@@ -72,7 +72,7 @@ annotateDecl mname e@(FunBind _ (m:_)) = everywhere (mkT (annotateStatements (Ju
               Match _ name _ _ _ -> prettyPrint name
               InfixMatch _ _ name _ _ _ -> prettyPrint name
 
-annotateDecl mname e@(PatBind _ (PVar _ fn) _ _ _) = everywhere (mkT (annotateStatements (Just $ prettyPrint fn) mname)) e
+annotateDecl mname e@(PatBind _ (PVar _ fn) _ _) = everywhere (mkT (annotateStatements (Just $ prettyPrint fn) mname)) e
 annotateDecl mname e = everywhere (mkT (annotateStatements Nothing mname)) e
 
 annotateStatements :: Maybe String -> String -> Exp SrcSpanInfo -> Exp SrcSpanInfo
